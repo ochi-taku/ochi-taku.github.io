@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>プロジェクト１</title>
 </head>
+
 <body>
     <h1>10連ガシャシミュレーター</h1>
-    <p><input type="text" value=""></p>
-    <p><input type="text" value=""></p>
-    <p></p>
-    <p><input type="button" value="ガシャる！"></p>
+    <p>
+        <strong>最上位レアリティ</strong>
+        <input type="radio" value="SSR">SSR
+        <input type="radio" value="PR">PR
+        <input type="radio" value="UR">UR
+        <strong>確率:</strong>
+        <input type="number" min="0" max="100" step="0.1" id="rate01" value="">％
+    </p>
+    <p>
+        <strong>中位レアリティ</strong>
+        <input type="radio" value="SSR">SSR
+        <input type="radio" value="SR">SR
+        <strong>確率：</strong>
+        <input type="number" min="0" max="100" step="0.1" id="rate02" value="">％
+    </p>
+    <p>
+        <strong>下位レアリティ</strong>
+        <input type="radio" value="R">R
+        <strong>確率：</strong>
+    </p>
+    <p>
+        <input type="button" value="ガシャる！">
+    </p>
     <h2>ガシャ結果</h2>
     <p>ここに結果</p>
-    
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-        
     </script>
 </body>
+
 </html>
