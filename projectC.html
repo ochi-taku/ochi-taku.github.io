@@ -69,7 +69,12 @@
 
             var option = {
                 region: 'JP',
-                resolution: 'provinces'
+                resolution: 'provinces',
+                width: 900,
+                height: 500,
+                legend: {
+                    position: 'none'
+                },
             };
 
             var chart = new google.visualization.GeoChart(document.getElementById('chart'));
