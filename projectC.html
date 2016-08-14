@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://www.google.com/jsapi"></script>
-    <script>
+    <script type="text/javascript">
         google.load('visualization', '1', {
             packages: ['geochart']
         });
@@ -79,6 +79,77 @@
 
             var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
             chart.draw(data, option);
+        };
+
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(Chart02);
+
+        function Chart02() {
+            var data = google.visualization.arrayToDataTable([
+    ["都道府県", "保有台数あたりの交通事故死者数（10万台あたり）"],
+    ["北海道", 4.76],
+    ["青森", 3.98],
+    ["岩手", 7.82],
+    ["宮城", 3.93],
+    ["秋田", 4.63],
+    ["山形", 6.1],
+    ["福島", 4.68],
+    ["茨城", 5.46],
+    ["栃木", 5.75],
+    ["群馬", 3.82],
+    ["埼玉", 4.38],
+    ["千葉", 5.03],
+    ["東京", 3.64],
+    ["神奈川", 4.46],
+    ["新潟", 5.26],
+    ["山梨", 4.4],
+    ["長野", 3.64],
+    ["静岡", 5.35],
+    ["富山", 7.8],
+    ["石川", 5.13],
+    ["福井", 7.11],
+    ["岐阜", 6.32],
+    ["愛知", 4.14],
+    ["三重", 5.79],
+    ["滋賀", 7.18],
+    ["京都", 6.5],
+    ["大阪", 5,25],
+    ["兵庫", 5.68],
+    ["奈良", 5.53],
+    ["和歌山", 6.38],
+    ["鳥取", 8.2],
+    ["島根", 4.89],
+    ["岡山", 5.72],
+    ["広島", 5.05],
+    ["山口", 5.96],
+    ["徳島", 4.36],
+    ["香川", 6.67],
+    ["愛媛", 7.7],
+    ["高知", 5.35],
+    ["福岡", 4.58],
+    ["佐賀", 7.15],
+    ["長崎", 4.77],
+    ["熊本", 5.82],
+    ["大分", 5.03],
+    ["宮崎", 5.54],
+    ["鹿児島", 5.74],
+    ["沖縄", 3.83],
+  ]);
+
+            var option = {
+                region: 'JP',
+                resolution: 'provinces',
+                width: 900,
+                height: 500,
+                legend: {
+                    position: 'none'
+                },
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('chart02'));
+            chart.draw(data, option);
         }
     </script>
 
@@ -90,11 +161,24 @@
         <h1 class="alert alert-info">交通事故死者数について</h1>
         <h3>2015年の交通事故死者数（都道府県別）</h3>
         <div id="chart01"></div>
+    </div>    
+    
+    <div class="container">
+       
+        <h3>保有台数あたりの交通事故死者数（都道府県別）</h3>
+        <div id="chart02"></div>
 
     </div>
 
     <h3>参考サイト</h3>
-    <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617" target="_blank">e-Stat</a>
+    <ul>
+        <li>
+            <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617" target="_blank">e-Stat</a>
+        </li>
+        <li>
+            <a href="http://www.airia.or.jp/publish/statistics/number.html" target="_blank">一般財団法人　自動車検査登録情報協会</a>
+        </li>
+    </ul>
 </body>
 
 </html>
