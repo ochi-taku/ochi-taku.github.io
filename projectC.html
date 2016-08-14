@@ -1,10 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>2016年度課題ページ</title>
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(graphChart);
+
+        function graphChart() {
+            var data = google.visualization.arrayToDataTable([
+    ["都道府県", "交通事故死者数"],
+    ["北海道", 177],
+    ["青森", 40],
+    ["岩手", 80],
+    ["宮城", 66],
+    ["秋田", 38],
+    ["山形", 57],
+    ["福島", 77],
+    ["茨城", 140],
+    ["栃木", 98],
+    ["群馬", 68],
+    ["埼玉", 177],
+    ["千葉", 180],
+    ["東京", 161],
+    ["神奈川", 178],
+    ["新潟", 97],
+    ["山梨", 33],
+    ["長野", 69],
+    ["静岡", 153],
+    ["富山", 70],
+    ["石川", 46],
+    ["福井", 47],
+    ["岐阜", 106],
+    ["愛知", 213],
+    ["三重", 87],
+    ["滋賀", 73],
+    ["京都", 87],
+    ["大阪", 196],
+    ["兵庫", 171],
+    ["奈良", 46],
+    ["和歌山", 48],
+    ["鳥取", 38],
+    ["島根", 27],
+    ["岡山", 87],
+    ["広島", 95],
+    ["山口", 64],
+    ["徳島", 27],
+    ["香川", 52], 
+    ["愛媛", 78],
+    ["高知", 30],
+    ["福岡", 152],
+    ["佐賀", 48],
+    ["長崎", 45],
+    ["熊本", 79],
+    ["大分", 46],
+    ["宮崎", 52],
+    ["鹿児島", 77],
+    ["沖縄", 41],            
+  ]);
+
+            var option = {
+                region: 'JP',
+                resolution: 'provinces'
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('chart'));
+            chart.draw(data, option);
+        }
+    </script>
+
 </head>
+
 <body>
-    
+    <div id="chart"></div>
 </body>
+
 </html>
