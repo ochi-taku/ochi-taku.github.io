@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2016年度課題ページ</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://www.google.com/jsapi"></script>
     <script>
@@ -51,7 +54,7 @@
     ["広島", 95],
     ["山口", 64],
     ["徳島", 27],
-    ["香川", 52], 
+    ["香川", 52],
     ["愛媛", 78],
     ["高知", 30],
     ["福岡", 152],
@@ -61,7 +64,7 @@
     ["大分", 46],
     ["宮崎", 52],
     ["鹿児島", 77],
-    ["沖縄", 41],            
+    ["沖縄", 41],
   ]);
 
             var option = {
@@ -77,9 +80,13 @@
 </head>
 
 <body>
-　　 <h2>2015年の交通事故死者数（都道府県別）</h2>
-    <div id="chart"></div>
-    
+    <div class="container">
+
+        <h2 class="alert alert-info">2015年の交通事故死者数（都道府県別）</h2>
+        <div id="chart"></div>
+
+    </div>
+
     <h3>参考サイト</h3>
     <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617" target="_blank">e-Stat</a>
 </body>
