@@ -13,9 +13,9 @@
         google.load('visualization', '1', {
             packages: ['geochart']
         });
-        google.setOnLoadCallback(graphChart);
+        google.setOnLoadCallback(Chart01);
 
-        function graphChart() {
+        function Chart01() {
             var data = google.visualization.arrayToDataTable([
     ["都道府県", "交通事故死者数"],
     ["北海道", 177],
@@ -77,7 +77,7 @@
                 },
             };
 
-            var chart = new google.visualization.GeoChart(document.getElementById('chart'));
+            var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
             chart.draw(data, option);
         }
     </script>
@@ -87,8 +87,9 @@
 <body>
     <div class="container">
 
-        <h2 class="alert alert-info">2015年の交通事故死者数（都道府県別）</h2>
-        <div id="chart"></div>
+        <h1 class="alert alert-info">交通事故死者数について</h1>
+        <h3>2015年の交通事故死者数（都道府県別）</h3>
+        <div id="chart01"></div>
 
     </div>
 
