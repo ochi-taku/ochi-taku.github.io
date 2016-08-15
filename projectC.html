@@ -16,7 +16,7 @@
         google.setOnLoadCallback(Chart01);
 
         function Chart01() {
-            
+
             var data = google.visualization.arrayToDataTable([
                 ["都道府県", "交通事故死者数"],
                 ["北海道", 177],
@@ -88,7 +88,7 @@
         google.setOnLoadCallback(Chart02);
 
         function Chart02() {
-            
+
             var data = google.visualization.arrayToDataTable([
                 ["都道府県", "保有台数あたりの交通事故死者数（10万台あたり）"],
                 ["北海道", 4.76],
@@ -163,10 +163,109 @@
         <h1 class="alert alert-info">交通事故死者数について</h1>
         <h3>2015年の交通事故死者数（都道府県別）</h3>
         <div id="chart01"></div>
-    </div>    
-    
+
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-striped">
+                    <caption class="lead"><strong>&lt; ベスト5 &gt;</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="text-center">順位</div>
+                            </th>
+                            <th>
+                                <div class="text-center">県名</div>
+                            </th>
+                            <th>
+                                <div class="text-center">死者数</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="center">
+                            <td>1位</td>
+                            <td>島根</td>
+                            <td>27</td>
+                        </tr>
+                        <tr align="center">
+                            <td>1位</td>
+                            <td>徳島</td>
+                            <td>27</td>
+                        </tr>
+                        <tr align="center">
+                            <td>3位</td>
+                            <td>高知</td>
+                            <td>30</td>
+                        </tr>
+                        <tr align="center">
+                            <td>4位</td>
+                            <td>山梨</td>
+                            <td>33</td>
+                        </tr>
+                        <tr align="center">
+                            <td>5位</td>
+                            <td>鳥取</td>
+                            <td>38</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-6">
+                <table class="table table-striped">
+                    <caption class="lead"><strong>&lt; ワースト5 &gt;</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="text-center">順位</div>
+                            </th>
+                            <th>
+                                <div class="text-center">県名</div>
+                            </th>
+                            <th>
+                                <div class="text-center">死者数</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="center">
+                            <td>1位</td>
+                            <td>愛知</td>
+                            <td>216</td>
+                        </tr>
+                        <tr align="center">
+                            <td>2位</td>
+                            <td>大阪</td>
+                            <td>196</td>
+                        </tr>
+                        <tr align="center">
+                            <td>3位</td>
+                            <td>千葉</td>
+                            <td>180</td>
+                        </tr>
+                        <tr align="center">
+                            <td>4位</td>
+                            <td>神奈川</td>
+                            <td>178</td>
+                        </tr>
+                        <tr align="center">
+                            <td>5位</td>
+                            <td>北海道</td>
+                            <td>177</td>
+                        </tr>
+                        <tr align="center">
+                            <td>5位</td>
+                            <td>埼玉</td>
+                            <td>177</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-       
+
         <h3>保有台数あたりの交通事故死者数（都道府県別）</h3>
         <div id="chart02"></div>
 
