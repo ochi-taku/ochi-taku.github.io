@@ -67,7 +67,7 @@
 </head>
 
 <body>
-   <h1>GoogleChartの解説ページ</h1>
+   <h1>GoogleChartのまとめページ</h1>
      <p>
        このページでは、2015年度にゼミ内で発表したGoogleChartについての発表をまとめています。<br>
        GoogleChartとは、GoogleのAPIを使ったグラフ作成ツールです。<br>
@@ -75,9 +75,12 @@
      </p>
      <br>
      <h2>円グラフの描画</h2>
-      <p>まず、エクセルでグラフを作成するとこのようになります。</p>
+      <p>
+          睡眠：8時間、仕事：12時間、趣味：4時間という1日の内訳を円グラフで描いてみました。<br>
+          まず、エクセルでグラフを作成するとこんな感じになります。
+      </p>
       <img src="image/piechart.jpg" alt="pie chart" height="450">
-      <p>GoogleChartで作成するとこのようになります。</p>
+      <p>次に、GoogleChartで作成するとこのようになりました。</p>
       <div id="Pie"></div>
      <br>
      <h2>横棒グラフの描画</h2>
@@ -92,8 +95,45 @@
       <h2>スプレッドシートで作成したグラフの挿入</h2>
        <p>
            Googleスプレッドシートで作成したグラフを挿入することもできます。<br>
-           ただし、スプレッドシートを公開する必要があるので注意！！
+           ただし、スプレッドシートを公開する必要があるので注意！！<br>
+           今回は下の表をスプレッドシートで作成し、それを元にしたグラフを挿入しています。
        </p>
+       <table>
+           <thead>
+               <tr>
+                   <th>年度</th>
+                   <th>売上</th>
+                   <th>利益</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>2010</td>
+                   <td>1350</td>
+                   <td>1000</td>
+               </tr>
+               <tr>
+                   <td>2011</td>
+                   <td>1500</td>
+                   <td>750</td>
+               </tr>
+               <tr>
+                   <td>2012</td>
+                   <td>1250</td>
+                   <td>920</td>
+               </tr>
+               <tr>
+                   <td>2013</td>
+                   <td>1650</td>
+                   <td>850</td>
+               </tr>
+               <tr>
+                   <td>2014</td>
+                   <td>1400</td>
+                   <td>1100</td>
+               </tr>
+           </tbody>
+       </table>
        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1-he0Rhei4A2-ZDp5hfx3Zx2YJn0ra4ajS5SQSepsJ2o/pubchart?oid=610491967&amp;format=interactive"></iframe>
       <br>
       <a href="index.html">戻る</a>
