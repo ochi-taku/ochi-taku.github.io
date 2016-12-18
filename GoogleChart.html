@@ -24,7 +24,6 @@
                 width: 500,
                 height:500,
                 pieSliceText: 'label',
-                is3D: true
             };
         
             var chart = new google.visualization.PieChart(document.getElementById('Pie'));
@@ -69,17 +68,20 @@
 
 <body>
    <h1>GoogleChartの解説ページ</h1>
-   <p>
+     <p>
        このページでは、2015年度にゼミ内で発表したGoogleChartについての発表をまとめています。<br>
        GoogleChartとは、GoogleのAPIを使ったグラフ作成ツールです。<br>
        簡単に”Colorful”で”Interactive”なグラフが作れるのが魅力です。
-   </p>
-   <br>
-   <h2>円グラフの描画</h2>
-   <div id="Pie"></div>
-   <br>
-   <h2>横棒グラフの描画</h2>
-   <div id="Bar"></div>
+     </p>
+     <br>
+     <h2>円グラフの描画</h2>
+       <p>まず、エクセルでグラフを作成するとこのようになります。</p>
+       <img src="image/piechart.jpg" alt="pie chart" height="450">
+       <p>GoogleChartで作成するとこのようになります。</p>
+       <div id="Pie"></div>
+     <br>
+     <h2>横棒グラフの描画</h2>
+       <div id="Bar"></div>
 </body>
 
 </html>
