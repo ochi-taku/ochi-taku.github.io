@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Chart</title>
+    
+    <!--APIのロード-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        //visualization APIと基本的なグラフのパッケージをロード
+        google.load("visualization","1", {packages: ["corechart"]});
+        //コールバック関数の設定
+        google.setOnLoadCallback(drawChart);
+        
+        //グラフ作成用のコールバック関数
+        function drawChart() {
+            
+            //データの用意
+            var data = new google.visualization.arrayToDataTable([
+                ['タスク','時間'],
+                ['睡眠',8],
+                ['仕事',12],
+                ['趣味',4]    
+            ]);  
+            
+            //オプションの指定
+            var options = {
+                title: '1日の内訳',
+                width: 500,
+                height:500,
+                pieSliceText: 'label',
+                is3D: true
+            };
+        
+            //オブジェクトの作成
+            var chart = new google.visualization.PieChart(document.getElementById('chart'));
+            //描画する
+            chart.draw(data, options);
+            
+         }
+    </script>
+    
+</head>
+
+<body>
+    <div id="chart"></div>
+</body>
+
+</html>
