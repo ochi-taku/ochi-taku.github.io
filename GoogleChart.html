@@ -5,18 +5,13 @@
     <meta charset="UTF-8">
     <title>Google Chart</title>
     
-    <!--APIのロード-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        //visualization APIと基本的なグラフのパッケージをロード
         google.load("visualization","1", {packages: ["corechart"]});
-        //コールバック関数の設定
-        google.setOnLoadCallback(drawChart);
+        google.setOnLoadCallback(PieChart);
         
-        //グラフ作成用のコールバック関数
-        function drawChart() {
+        function PieChart() {
             
-            //データの用意
             var data = new google.visualization.arrayToDataTable([
                 ['タスク','時間'],
                 ['睡眠',8],
@@ -24,7 +19,6 @@
                 ['趣味',4]    
             ]);  
             
-            //オプションの指定
             var options = {
                 title: '1日の内訳',
                 width: 500,
@@ -33,9 +27,39 @@
                 is3D: true
             };
         
-            //オブジェクトの作成
-            var chart = new google.visualization.PieChart(document.getElementById('chart'));
-            //描画する
+            var chart = new google.visualization.PieChart(document.getElementById('Pie'));
+            chart.draw(data, options);
+            
+         };
+        
+        google.load("visualization","1", {packages: ["corechart"]});
+        google.setOnLoadCallback(BarChart);
+        
+        function BarChart() {
+            
+            var data = new google.visualization.arrayToDataTable([
+                ['名前','上半期実績','通期実績'],
+                ['妖怪ウォッチ',225,552],
+                ['機動戦士ガンダム',117,229],
+                ['仮面ライダー',79,206],
+                ['スーパー戦隊',74,113],
+                ['アンパンマン',35,81],
+                ['プリキュア',36,65],
+                ['ドラゴンボール',29,58],
+                ['アイカツ！',50,86],
+                ['ウルトラマン',15,26]
+            ]);  
+            
+            var options = {
+                title: 'IP別売上高（国内トイホビー）',
+                width: 500,
+                height:500,
+                legend: {
+                    position: 'bottom'
+                },
+            };
+        
+            var chart = new google.visualization.BarChart(document.getElementById('Bar'));
             chart.draw(data, options);
             
          }
@@ -44,7 +68,8 @@
 </head>
 
 <body>
-    <div id="chart"></div>
+    <div id="Pie"></div>
+    <div id="Bar"></div>
 </body>
 
 </html>
