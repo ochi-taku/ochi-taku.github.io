@@ -10,27 +10,27 @@
     <h1>10連ガシャシミュレーター</h1>
     <p>
         <strong>最上位レアリティ</strong>
-        <input type="radio" name="top" value="SSR">SSR
-        <input type="radio" name="top" value="PR">PR
-        <input type="radio" name="top" value="UR">UR
+        <input type="radio" id="top" name="top" value="SSR">SSR
+        <input type="radio" id="top" name="top" value="PR">PR
+        <input type="radio" id="top" name="top" value="UR">UR
         <strong>確率:</strong>
         <input type="number" min="0" max="100" step="0.1" id="rate01" value="0">％
     </p>
     <p>
         <strong>中位レアリティ</strong>
-        <input type="radio" name="moderate" value="SSR">SSR
-        <input type="radio" name="moderate" value="SR">SR
+        <input type="radio" id="moderate" name="moderate" value="SSR">SSR
+        <input type="radio" id="moderate" name="moderate" value="SR">SR
         <strong>確率：</strong>
         <input type="number" min="0" max="100" step="0.1" id="rate02" value="0">％
     </p>
     <p>
         <strong>下位レアリティ</strong>
-        <input type="radio" name="low" value="R">R
+        <input type="radio" id="low" name="low" value="R">R
         <strong>確率：</strong>
         <strong id="rate03">100</strong>％
     </p>
     <p>
-        <input type="button" value="ガシャる！">
+        <input type="button" id="getresult" value="ガシャる！">
     </p>
     <h2>ガシャ結果</h2>
     <p>ここに結果</p>
@@ -43,6 +43,11 @@
                 var num02 = $("#rate02").val();
                 var num03 = 100 - num01 - num02
                 $("#rate03").text(num03);
+            });
+        });
+        $(function(){
+            $("#getresult").click(function(){
+                
             });
         });
     </script>
