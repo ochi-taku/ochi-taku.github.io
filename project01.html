@@ -37,7 +37,6 @@
     </p>
     <h2>ガシャ結果</h2>
     <p id="gresult">ここに結果</p>
-    <p id="rate04">aaa</p>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
@@ -79,6 +78,29 @@
                 var lvalue = $("input[name='low']:checked").val();
                 var result = lvalue + "だよ";
                 $("#lresult").text(result);
+            });
+        });
+        $(function(){
+            $("#getresult").click(function(){
+                var num01 = $("#rate01").val();
+                var num02 = $("#rate02").val();
+                var num03 = 100 - num01 - num02;
+                num01 = parseInt(num01);
+                num02 = parseInt(num02);
+                var num04 = num01 + num02;
+                var rate = Math.random() * 100;
+                if(rate <= num01){
+                    var result = "SSR";
+                    $("#gresult").text(result);
+                }
+                else if(rate <= num04){
+                    var result = "SR";
+                    $("#gresult").text(result);
+                }
+                else{
+                    var result = "R";
+                    $("#gresult").text(result);
+                }
             });
         });
     </script>
