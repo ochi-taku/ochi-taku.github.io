@@ -10,24 +10,27 @@
     <h1>10連ガシャシミュレーター</h1>
     <p>
         <strong>最上位レアリティ</strong>
-        <input type="radio" id="top" name="top" value="SSR">SSR
-        <input type="radio" id="top" name="top" value="PR">PR
-        <input type="radio" id="top" name="top" value="UR">UR
+        <input type="radio" id="top1" name="top" value="SSR">SSR
+        <input type="radio" id="top2" name="top" value="PR">PR
+        <input type="radio" id="top3" name="top" value="UR">UR
         <strong>確率:</strong>
         <input type="number" min="0" max="100" step="0.1" id="rate01" value="0">％
+        <strong id="tresult"></strong>
     </p>
     <p>
         <strong>中位レアリティ</strong>
-        <input type="radio" id="moderate" name="moderate" value="SSR">SSR
-        <input type="radio" id="moderate" name="moderate" value="SR">SR
+        <input type="radio" id="moderate1" name="moderate" value="SSR">SSR
+        <input type="radio" id="moderate2" name="moderate" value="SR">SR
         <strong>確率：</strong>
         <input type="number" min="0" max="100" step="0.1" id="rate02" value="0">％
+        <strong id="mresult"></strong>
     </p>
     <p>
         <strong>下位レアリティ</strong>
         <input type="radio" id="low" name="low" value="R">R
         <strong>確率：</strong>
         <strong id="rate03">100</strong>％
+        <strong id="lresult"></strong>
     </p>
     <p>
         <input type="button" id="getresult" value="ガシャる！">
@@ -41,13 +44,40 @@
             $("input").focusout(function(){
                 var num01 = $("#rate01").val();
                 var num02 = $("#rate02").val();
-                var num03 = 100 - num01 - num02
+                var num03 = 100 - num01 - num02;
                 $("#rate03").text(num03);
             });
         });
         $(function(){
-            $("#getresult").click(function(){
-                
+            $("#top1").click(function(){
+                var tvalue = $("input[name='top']:checked").val();
+                var result = tvalue + "だよ";
+                $("#tresult").text(result);
+            });
+            $("#top2").click(function(){
+                var tvalue = $("input[name='top']:checked").val();
+                var result = tvalue + "だよ";
+                $("#tresult").text(result);
+            });
+            $("#top3").click(function(){
+                var tvalue = $("input[name='top']:checked").val();
+                var result = tvalue + "だよ";
+                $("#tresult").text(result);
+            });
+            $("#moderate1").click(function(){
+                var mvalue = $("input[name='moderate']:checked").val();
+                var result = mvalue + "だよ";
+                $("#mresult").text(result);
+            });
+            $("#moderate2").click(function(){
+                var mvalue = $("input[name='moderate']:checked").val();
+                var result = mvalue + "だよ";
+                $("#mresult").text(result);
+            });
+            $("#low").click(function(){
+                var lvalue = $("input[name='low']:checked").val();
+                var result = lvalue + "だよ";
+                $("#lresult").text(result);
             });
         });
     </script>
