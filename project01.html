@@ -41,6 +41,7 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
+        //　確率計算の関数
         $(function(){
             $("input").focusout(function(){
                 var num01 = $("#rate01").val();
@@ -49,6 +50,7 @@
                 $("#rate03").text(num03);
             });
         });
+        // ラジオボタンの関数
         $(function(){
             $("#top1").click(function(){
                 var tvalue = $("input[name='top']:checked").val();
@@ -81,6 +83,7 @@
                 $("#lresult").text(result);
             });
         });
+        //　ガシャ結果の関数
         $(function(){
             $("#getresult").click(function(){
                 var num01 = $("#rate01").val();
@@ -104,6 +107,7 @@
                 }
             });
         });
+        //　リセットボタンの関数
         $(function(){
             $("#reset").click(function(){
                 $("#gresult").text("");
