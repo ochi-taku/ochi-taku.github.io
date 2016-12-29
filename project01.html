@@ -36,7 +36,7 @@
         <input type="button" id="getresult" value="ガシャる！">
     </p>
     <h2>ガシャ結果</h2>
-    <p id="gresult">ここに結果</p>
+    <p id="gresult"></p>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
@@ -88,18 +88,18 @@
                 num01 = parseInt(num01);
                 num02 = parseInt(num02);
                 var num04 = num01 + num02;
-                var rate = Math.random() * 100;
-                if(rate <= num01){
-                    var result = "SSR";
-                    $("#gresult").text(result);
-                }
-                else if(rate <= num04){
-                    var result = "SR";
-                    $("#gresult").text(result);
-                }
-                else{
-                    var result = "R";
-                    $("#gresult").text(result);
+                for(var i = 0; i < 10; i++){
+                    var rate = Math.random() * 100;
+                    if(rate <= num01){
+                        var result = "SSR";
+                    }
+                    else if(rate <= num04){
+                        var result = "SR";
+                    }
+                    else{
+                        var result = "R";
+                    }
+                    $("#gresult").append(result + "<br>");
                 }
             });
         });
