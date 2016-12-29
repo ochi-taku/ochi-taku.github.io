@@ -34,6 +34,7 @@
     </p>
     <p>
         <input type="button" id="getresult" value="ガシャる！">
+        <input type="button" id="reset" value="リセット">
     </p>
     <h2>ガシャ結果</h2>
     <p id="gresult"></p>
@@ -101,6 +102,11 @@
                     }
                     $("#gresult").append(result + "<br>");
                 }
+            });
+        });
+        $(function(){
+            $("#reset").click(function(){
+                $("#gresult").text("");
             });
         });
     </script>
